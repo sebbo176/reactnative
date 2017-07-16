@@ -14,7 +14,7 @@ var styles = ReactNative.StyleSheet.create({
 
 class PropertyFinderApp extends React.Component {
   render() {
-    return React.createElement(ReactNative.Text, {style: styles.text}, "Hej världen!");
+    return <ReactNative.Text style={styles.text}>Hej världen med JSX syntax</ReactNative.Text>
   }
 }
 
