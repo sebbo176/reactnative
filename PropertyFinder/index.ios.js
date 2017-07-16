@@ -9,12 +9,28 @@ var styles = ReactNative.StyleSheet.create({
     backgroundColor: 'white',
     fontSize: 30,
     margin: 80
+  },
+  container: {
+    flex: 1
   }
 });
 
-class PropertyFinderApp extends React.Component {
+class HelloWorld extends React.Component {
   render() {
     return <ReactNative.Text style={styles.text}>Hej världen med JSX syntax</ReactNative.Text>
+  }
+}
+
+class PropertyFinderApp extends React.Component {
+  render() {
+    return (
+      <ReactNative.NavigatorIOS
+        style={styles.container}
+        initialRoute={{
+          title: 'Property Finder',
+          component: HelloWorld,
+        }}/>
+    );
   }
 }
 
