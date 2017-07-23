@@ -1,6 +1,6 @@
 'use strict';
 
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import {
   StyleSheet,
   Text,
@@ -28,11 +28,6 @@ var styles = StyleSheet.create({
     alignItems: 'center',
     alignSelf: 'stretch'
   },
-  flowRight: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    alignSelf: 'stretch'
-  },
   buttonText: {
     fontSize: 18,
     color: 'white',
@@ -54,6 +49,7 @@ var styles = StyleSheet.create({
     height: 36,
     padding: 4,
     marginRight: 5,
+    marginBottom: 10,
     flex: 4,
     fontSize: 18,
     borderWidth: 1,
@@ -82,10 +78,12 @@ class SearchPage extends Component {
             <Text style={styles.buttonText}>Go</Text>
           </TouchableHighlight>
         </View>
+        <View style={styles.flowRight}>
         <TouchableHighlight style={styles.button}
             underlayColor='#99d9f4'>
           <Text style={styles.buttonText}>Location</Text>
         </TouchableHighlight>
+      </View>
       </View>
     );
   }
