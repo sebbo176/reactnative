@@ -78,7 +78,7 @@ function urlForQueryAndPage(key, value, pageNumber) {
   .map(key => key + '=' + encodeURIComponent(data[key]))
   .join('&');
 
-  return 'http://api.nestoria.co.uk/api?' + querystring;
+  return 'https://api.nestoria.co.uk/api?' + querystring;
 };
 
 class SearchPage extends Component {
