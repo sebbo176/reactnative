@@ -115,7 +115,7 @@ class SearchPage extends Component {
   }
 
   _handleResponse(response) {
-    this.setstate({ isLoading: false , message: ''});
+    this.setState({ isLoading: false , message: ''});
     if(response.application_response_code.substr(0,1) === '1') {
       console.log('Properties found: ' + response.listings.length);
     } else {
