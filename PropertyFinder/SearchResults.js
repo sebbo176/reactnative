@@ -55,27 +55,30 @@ class SearchResults extends Component {
     var property = this.props.listings.filter(prop => prop.lister_url === listerURL)[0];
 
     this.props.navigator.push({
-      title: 'Property',
-      Component: PropertyView,
+      title: "Property",
+      component: PropertyView,
       passProps: {property: property}
     });
   }
 
   renderRow(rowData, sectionID, rowID) {
     var price = rowData.price_formatted.split(' ')[0];
+
     return (
-      <TouchableHighlight onPress={() => this.rowPressed(rowData.lister_url)}
-        underlayColor='#dddddd'>
+        <TouchableHighlight onPress={() => this.rowPressed(rowData.lister_url)}
+          underlayColor='#dddddd'>
+        <View>
           <View style={styles.rowContainer}>
-            <Image style={styles.thumb} source={{ uri: rowData.img_url}} />
-            <View style={styles.textContainer}>
+            <Image style={styles.thumb} source={{ uri: rowData.img_url }} />
+            <View  style={styles.textContainer}>
               <Text style={styles.price}>{price}</Text>
               <Text style={styles.title}
-                numberOfLines={1}>{rowData.title}</Text>
+                    numberOfLines={1}>{rowData.title}</Text>
             </View>
-            <View style={styles.separator} />
           </View>
-        </TouchableHighlight>
+          <View style={styles.separator}/>
+        </View>
+      </TouchableHighlight>
     );
   }
 
@@ -86,7 +89,6 @@ class SearchResults extends Component {
         renderRow={this.renderRow.bind(this)}/>
     );
   }
-
 }
 
 module.exports = SearchResults;
