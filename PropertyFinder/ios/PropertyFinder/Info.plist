@@ -36,7 +36,7 @@
 		</dict>
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string></string>
+	<string>PropertyFinder would like to use your locatio to find nearby properties</string>
 	<key>NSMainNibFile</key>
 	<string>LaunchScreen</string>
 	<key>UILaunchStoryboardName</key>
@@ -51,6 +51,8 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
 </dict>
